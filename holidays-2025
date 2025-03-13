@@ -1,0 +1,68 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Calendario2025 {
+    public static void main(String[] args) {
+        // Cria uma lista para armazenar apenas os feriados
+        List<String> listaFeriados = new ArrayList<>();
+
+        // Array com as datas que serão verificadas
+        String[] datas = {"03/03/2025", "04/03/2025", "18/04/2025", "21/04/2025", "01/05/2025", "19/06/2025", "25/12/2025"};
+
+        // Loop para verificar as datas e aplicar as regras
+        for (String data : datas) {
+            switch (data) {
+                case "03/03/2025":
+                case "04/03/2025":
+                    // Adiciona "Carnaval" se for 3 ou 4 de março
+                    listaFeriados.add(data + ": Carnaval (3 e 4 de março) – Segunda e terça-feira.");
+                    break;
+
+                case "18/04/2025":
+                    // Adiciona "Paixão de Cristo" para 18 de abril
+                    listaFeriados.add(data + ": Paixão de Cristo (18 de abril) – Sexta-feira.");
+                    break;
+
+                case "21/04/2025":
+                    // Adiciona "Tiradentes" para 21 de abril
+                    listaFeriados.add(data + ": Tiradentes (21 de abril) – Segunda-feira.");
+                    break;
+
+                case "01/05/2025":
+                    // Adiciona "Dia do Trabalhador" para 1º de maio
+                    listaFeriados.add(data + ": Dia do Trabalhador (1º de maio) – Quinta-feira.");
+                    break;
+
+                case "19/06/2025":
+                    // Adiciona "Corpus Christi" para 19 de junho
+                    listaFeriados.add(data + ": Corpus Christi (19 de junho) – Quinta-feira.");
+                    break;
+
+                case "25/12/2025":
+                    // Adiciona "Natal" para 25 de dezembro
+                    listaFeriados.add(data + ": Natal (25 de dezembro) – Quinta-feira.");
+                    break;
+
+                default:
+                    // Datas que não são feriados não são adicionadas à lista
+                    break;
+            }
+        }
+
+        // Imprime todas as descrições armazenadas na lista de feriados
+        System.out.println("Lista de feriados do ano de 2025:");
+        for (String descricao : listaFeriados) {
+            System.out.println(descricao);
+        }
+
+        // Comentário com a saída esperada:
+        // Lista de feriados do ano de 2025:
+        // 03/03/2025: Carnaval (3 e 4 de março) – Segunda e terça-feira.
+        // 04/03/2025: Carnaval (3 e 4 de março) – Segunda e terça-feira.
+        // 18/04/2025: Paixão de Cristo (18 de abril) – Sexta-feira.
+        // 21/04/2025: Tiradentes (21 de abril) – Segunda-feira.
+        // 01/05/2025: Dia do Trabalhador (1º de maio) – Quinta-feira.
+        // 19/06/2025: Corpus Christi (19 de junho) – Quinta-feira.
+        // 25/12/2025: Natal (25 de dezembro) – Quinta-feira.
+    }
+}
